@@ -1,0 +1,20 @@
+<html>
+	<body>
+		{% if rices %}
+		<table>
+			{% for rice in rices%}
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>No</th>
+			</tr>
+			<tr>
+				<td><a href={{rice.id}}>{{rice.id}}</a></td>
+				<td>{{rice.name}}</td>
+				<td>{{rice.number}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+	</body>
+</html>

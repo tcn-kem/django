@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>TCN Template</title>
+		<!-- Meta -->
+		<meta name="description" content="TCN Rice Expert - Result">
+		<!-- CSS -->
+		<link href="{{ STATIC_URL }}assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="{{ STATIC_URL }}assets/css/font-awesome.min.css" rel="stylesheet">
+		<link href="{{ STATIC_URL }}assets/css/bjqs.css" rel="stylesheet">
+		<link href="{{ STATIC_URL }}assets/css/style.css" rel="stylesheet">
+		<link href="{{ STATIC_URL }}assets/css/rice.css" rel="stylesheet">
+		<!-- JavaScript -->
+		<script src="{{ STATIC_URL }}assets/js/jquery-2.0.0.js"></script>
+		<script src="{{ STATIC_URL }}assets/js/jquery.transit.min.js"></script>
+		<script src="{{ STATIC_URL }}assets/js/bootstrap.min.js"></script>
+		<script src="{{ STATIC_URL }}assets/js/holder.js"></script>
+	</head>
+	<body>
+		<!-- Na'Vi -->
+		<div class="navi">
+			<div class="container">
+				<a class="brand" href="#">TCN Rice Expert</a>
+				<ul class="nav">
+					<li><a href="#step1">Step #1</a></li>
+					<li><a href="#step2">Step #2</a></li>
+					<li><a href="#step3">Step #3</a></li>
+					<li><a href="#step4">Step #4</a></li>
+					<li><a href="/rice/">TCN Rice Database</a></li>
+				</ul>
+			</div>
+		</div><!-- .navi -->
+		<div class="container">
+			<div id="content1" class="row-fluid">
+				<div class="span6">
+					<div class="text"><h2>Name: <strong>{{rice.name}}</strong></h2></div>
+					<div class="text"><h2>Kind: <small>{{rice.kind}}</small></h2></div>
+					<div class="text"><h2>No: <small>{{rice.number}}</small></h2></div>
+					<div class="text"><h2>Area: <small>{{rice.area}}</small></h2></div>
+					<div class="text"><h2>Terrain: <small>{{rice.terrain}}</small></h2></div>
+				</div>
+				<div class="span6">
+					<img src="holder.js/400x300">
+				</div>
+			</div>
+			<div id="content2" class="row-fluid">
+				<h2>Details : {{rice.detail}}</h2>
+			</div>
+		</div>
+	</body>
+</html>
