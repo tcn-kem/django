@@ -12,6 +12,7 @@ def result(request):
 	kind = request.GET['submit-kind']
 	#terrain = request.GET['submit-terrain']
 	terrain = ""
+
 	clips_list = clips_m.myclip('rules.clips','provinces.clips',area,kind,terrain)
 	rice_list = list()
 	for i in clips_list:

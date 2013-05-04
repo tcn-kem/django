@@ -40,11 +40,13 @@
 					<div class="text"><h2>Terrain: <small>{{rice.terrain}}</small></h2></div>
 				</div>
 				<div class="span6">
-					<img src="holder.js/400x300">
+					<img src="{{rice.pic}}">
 				</div>
 			</div>
 			<div id="content2" class="row-fluid">
-				<h2>Details : {{rice.detail}}</h2>
+				<div class="text"><h2>Characteristic: <small>{{ rice.character }}</small></h2></div><br>
+    		    <div class="text"><h2>Seed: <small>{{ rice.seed }}</small></h2></div><br>
+	        	<div class="text"><h2>Details: <small>{{ rice.detail }}</small></h2></div><br> 
 			</div>
 		</div>
 	</body>

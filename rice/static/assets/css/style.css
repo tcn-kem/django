@@ -25,21 +25,34 @@ h1 {
 .navi {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 600;
-	background: #222;
-	height: 60px;
+	background: #1e77d3;
+	height: 50px;
+	z-index: 10;
 	
-	-webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+	/* -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 	-moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); */
 }
 
 .navi .brand {
 	float: left;
+	color: #fff;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	padding: 0 15px;
 }
 
 .navi .nav {
-	float: right;
 	margin-bottom: 0;
+	float: right;
+}
+
+.navi .nav .divider {
+	height: 30px;
+	margin: 10px 5px;
+	border-left: 1px #1d6bb7 solid;
+	border-right: 1px #4f7ba8 solid;
 }
 
 .navi .nav > li {
@@ -48,31 +61,31 @@ h1 {
 
 .navi .nav > li > a {
 	color: #FFF;
-	height: 60px;
-	line-height: 60px;
-	padding: 0 10px;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 15px;
 }
 
 .navi .nav > li > a:hover {
-	color: #222;
+	color: #1e77d3;
 	text-decoration: none;
-	background-color: #222;
+	background-color: #fff;
 	
-	-webkit-transition: color 0.15s ease-in-out;
-	-moz-transition: color 0.15s ease-in-out;
-	-ms-transition: color 0.15s ease-in-out;
-	-o-transition: color 0.15s ease-in-out;
-	transition: color 0.15s ease-in-out;
+	-webkit-transition: 0.15s ease-in-out;
+	-moz-transition: 0.15s ease-in-out;
+	-ms-transition: 0.15s ease-in-out;
+	-o-transition: 0.15s ease-in-out;
+	transition: 0.15s ease-in-out;
 }
 
 /* ----------- .slider ---------- */
 .slider {
-	height: 500px;
+	height: 450px;
 	/* background-color: #fece30; */
 }
 
 .slider .carousel-inner .item {
-	height: 500px;
+	height: 450px;
 }
 
 .slider .carousel-inner .welcome {
@@ -88,7 +101,31 @@ h1 {
 }
 
 .slider .carousel-inner .steps {
-	background: #386bea;
+	background: #e3e3e3;
+	/*background: #386bea;*/
+}
+
+.slider .carousel-inner .steps h1 {
+	text-align: center;
+	font-weight: 600;
+	margin: 20px 0;
+}
+
+.slider .carousel-inner .steps h3.desc {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 23px;
+	line-height: 35px;
+	text-align: center;
+	font-weight: 400;
+	margin: 10px 0 100px 0;
+}
+
+.slider .carousel-inner .steps .row-fluid {
+	margin: 40px 0;
+}
+
+.slider .carousel-inner .steps .popover.bottom {
+	margin-top: 20px;
 }
 
 .slider .carousel-inner .database {
