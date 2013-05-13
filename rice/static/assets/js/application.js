@@ -151,35 +151,35 @@ $(document).ready(function() {
 	$('#step1 .rounded-shape').click(function() {
 		$('#step1 .kind').text('Rounded Shape');
 		$('#selected-kind').text('Rounded Shape');
-		$('#submit-kind').val('round shaped rice');
+		$('#submit-kind').val('round-shaped-rice');
 		$('#step1 .kind-detail').text('Rounded Detail')
 	});
 	
 	$('#step1 .sticky').click(function() {
 		$('#step1 .kind').text('Sticky');
 		$('#selected-kind').text('Sticky');
-		$('#submit-kind').val('Sticky');
+		$('#submit-kind').val('sticky-rice');
 		$('#step1 .kind-detail').text('Sticky Detail')
 	});
 	
 	$('#step1 .japanese').click(function() {
 		$('#step1 .kind').text('Japanese Rice');
 		$('#selected-kind').text('Japanese Rice');
-		$('#submit-kind').val('Japanese Rice');
+		$('#submit-kind').val('japanese-rice');
 		$('#step1 .kind-detail').text('Japanese Detail')
 	});
 	
 	$('#step1 .barley').click(function() {
 		$('#step1 .kind').text('Barley');
 		$('#selected-kind').text('Barley');
-		$('#submit-kind').val('Barley');
+		$('#submit-kind').val('barley-rice');
 		$('#step1 .kind-detail').text('Barley Detail')
 	});
 	
 	$('#step1 .wheat').click(function() {
 		$('#step1 .kind').text('Wheat');
 		$('#selected-kind').text('Wheat');
-		$('#submit-kind').val('Wheat');
+		$('#submit-kind').val('wheat');
 		$('#step1 .kind-detail').text('Wheat Detail')
 	});
 

@@ -20,7 +20,7 @@
         <script src="{{ STATIC_URL }}assets/js/application.js"></script>
     </head>
     <body>
-        <form id="riceform" action="result/" method="get">{% csrf_token %}
+        <form id="riceform" action="result/" method="post">{% csrf_token %}
         <div class="navi">
             <div class="container">
                 <a class="brand" href="#">TCN Rice Expert</a>
@@ -201,7 +201,6 @@
             <!-- hidden form -->
             <input type="hidden" id="submit-kind" name="submit-kind" value="">
             <input type="hidden" id="submit-area" name="submit-area" value="">
-            <input type="hidden" id="submit-terrain" name="submit-terrain" value="">
             <!-- end hidden form -->
 
         </div><!-- .submit -->

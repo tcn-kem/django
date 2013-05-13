@@ -8,12 +8,11 @@ def index(request):
 
 def result(request):
 	#get submit form
-	area = request.GET['submit-area']
-	kind = request.GET['submit-kind']
-	#terrain = request.GET['submit-terrain']
+	area = request.POST['submit-area']
+	kind = request.POST['submit-kind']
 	terrain = ""
 
-	clips_list = clips_m.myclip('rules.clips','provinces.clips',area,kind,terrain)
+	clips_list = clips_m.myclip(area,kind,terrain)
 	rice_list = list()
 	for i in clips_list:
 		rice_list.append(Rice.objects.get(name=i))

@@ -1,8 +1,8 @@
 import clips,readfile
-def myclip(rule_file,province_file,_province,_kind,_terrain):
+def myclip(_province,_kind,_terrain):
 	clips.Reset()
-	rules = [rule.strip() for rule in readfile.readfile(rule_file)]
-	provinces = [province.strip() for province in readfile.readfile(province_file)]
+	rules = [rule.strip() for rule in readfile.readfile('rules.txt')]
+	provinces = [province.strip() for province in readfile.readfile('province.txt')]
 
 	for province in provinces:
 		clips.SendCommand(province.strip())
@@ -29,5 +29,5 @@ def myclip(rule_file,province_file,_province,_kind,_terrain):
 
 	for i in range(af - (af - bf)):
 		clips.FactList()[0].Retract()
-
+	#clips.PrintRules()
 	return [i.PPForm()[8+6:-1] for i in clips.FactList()]     
