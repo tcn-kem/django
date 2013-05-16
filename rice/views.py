@@ -17,7 +17,8 @@ def result(request):
 	for i in clips_list:
 		rice_list.append(Rice.objects.get(name=i))
 
-	context = {'rices':rice_list}
+	context = {'rices':rice_list
+	,'area':area,'kind':kind}
 	return render(request,'result.html',context)
 
 def rice_index(request):

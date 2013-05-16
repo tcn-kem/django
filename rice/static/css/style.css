@@ -1,0 +1,326 @@
+@font-face {
+  font-family: "Gnuolane";
+  src: url('../font/gnuolane/tt/gnuolane rg.ttf') format("truetype");
+}
+
+.content {
+	height: 600px;
+}
+
+/* font h1 */
+h1 {
+	font-family: "Gnuolane", sans-serif;
+}
+
+/* introduction (.intro) */
+
+.intro {
+	height: 370px;
+}
+
+.intro h1 {
+	color: #949395;
+	text-align: center;
+	font-family: "Gnuolane", sans-serif;
+	font-size: 50px;
+}
+
+.intro h4 {
+	color: #bbbbbb;
+	text-align: center;
+	font-family: "Gnuolane", sans-serif;
+}
+
+.intro p {
+	margin-top: 50px;
+	font-size: 17px;
+	line-height: 25px;
+	color: #666666;
+	column-count: 2;
+	-moz-column-count: 2; 
+	-webkit-column-count: 2;
+	column-gap: 30px;
+	-moz-column-gap: 30px; 
+	-webkit-column-gap: 30px;
+}
+
+.intro .container {
+	padding: 50px;
+}
+
+#logo {
+	color: red;
+	padding: 30px;
+	position: fixed !important;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	/* TODO width + height */
+}
+
+
+#blur {
+	background: url(../img/grass-macro-blur-nature.jpg);
+	height: 500px;
+}
+
+header {
+	width: 1000px;
+	height: 100px;
+	margin: 0 auto;
+	position: relative;
+}
+
+header nav {
+	position: absolute;
+	top: 40px;
+	right: 0;
+}
+
+header nav ul {
+	list-style-type: none;
+}
+
+header nav ul li {
+	display: inline;
+	margin-left: 50px;
+}
+
+header nav ul li a {
+	color: #6a6a6a;
+}
+
+/* feature */
+
+#feature {
+	padding: 80px;
+}
+
+#feature a {
+	font-family: "Gnuolane", sans-serif;
+	text-align: center;
+	color: #cecdd0;
+}
+
+#feature h1 {
+	font-family: "Gnuolane", sans-serif;
+	font-weight: bold;
+	text-align: center;
+	color: #cecdd0;
+}
+
+#feature h3 {
+	font-family: "Gnuolane", sans-serif;
+	font-weight: bold;
+	text-align: center;
+	color: #cecdd0;
+}
+
+#feature h4 {
+	font-family: "Gnuolane", sans-serif;
+	text-align: center;
+	color: #cecdd0;	
+}
+
+/* #kind */
+
+#kind {
+	background-color: #fafafa;
+	padding: 50px;
+}
+
+#kind h1 {
+	font-family: "Gnuolane", sans-serif;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+#kind .boxes {
+	margin-left: 90px;
+}
+
+#kind .row-fluid{
+	margin-bottom: 40px
+}
+
+#kind .box {
+	height: 220px;
+	width: 350px;
+	background-color: red;
+	cursor: pointer;
+}
+
+#kind .kind-title {
+	padding: 20px;
+	font-family: "Gnuolane", sans-serif;
+	font-size: 50px;
+	line-height: 55px;
+	text-align: center;
+}
+
+/* #area */
+
+#area {
+	height: 250px;
+	padding: 50px;
+	background-color: #f7f6f8;
+}
+
+#area h1 {
+	font-family: "Gnuolane", sans-serif;
+	font-weight: bold;
+	text-align: center;
+}
+
+#area h2 {
+	margin-left: 50px;
+	display: inline;
+	text-align: center;
+	font-family: "Gnuolane", sans-serif;
+	color: #6567a5;
+}
+
+#area .span6:last-child {
+	margin-left: 20px;
+}
+
+#area select {
+	margin-top: 7px;
+	width: 350px;
+	height: 250px;	
+}
+
+#area p {
+	text-align: center;
+	display: inline;
+	color: #6567a5;
+}
+
+#area i:hover {
+	color: #25a0ca;
+}
+
+/* #submit */
+#submit {
+	height: 400px;
+	padding: 50px;
+	background-color: #e6e5e8;
+}
+
+.submittext {
+	margin-left: 50px;
+}
+
+#submit h1 {
+	font-family: "Gnuolane", sans-serif;
+	color: #2d72da;
+}
+
+#submit h2 {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	text-indent: 120px;
+	font-family: "Gnuolane", sans-serif;
+	color: #59a3fc;
+}
+
+#submit p {
+	text-align: center;
+	font-size: 50px;
+	color: #0088cc;
+	cursor: pointer;
+}
+
+/* footer */
+
+footer {
+	height: 150px;
+	background-color: #000000;
+}
+
+footer h5 {
+	font-family: "Gnuolane", sans-serif;
+	color: white;
+}
+
+footer p {
+	color: white;
+	margin: 0;
+}
+
+footer .container {
+	padding: 20px;
+}
+
+/* blur2 */
+#blur2 {
+	background: url(../img/grass-macro-blur-nature.jpg);;
+	height: 100px;
+}
+
+/* result */
+.result {
+	background: #fafafa;
+	padding: 40px;
+}
+
+.result h1 {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+/* rice */
+
+#des {
+	background-color: #F7F0E0;
+	padding: 10px;
+}
+
+.rice {
+	padding: 40px;
+	background-color: #f0f0eb;
+}
+
+.rice h1 {
+	margin-bottom: 30px;
+	text-align: center;
+	font-family: "Gnuolane", sans-serif;
+}
+
+.rice strong {
+	font-size: 30px;
+	font-weight: bold;
+	font-family: "Gnuolane", sans-serif;
+}
+
+.rice p {
+	font-size: 20px;
+	line-height: 28px;
+	font-family: "Gnuolane", sans-serif;
+}
+
+.rice img {
+	max-height: 250px;
+	margin: 20px auto 50px auto;
+}
+
+.rice .img-center {
+	text-align: center;
+}
+
+/* edit bootstrap table */
+.table th {
+	text-align: center;
+}
+
+.table {
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+
+.table-bordered {
+	border-collapse: collapse;
+}

@@ -1,53 +1,65 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>TCN Template</title>
-		<!-- Meta -->
-		<meta name="description" content="TCN Rice Expert - Result">
-		<!-- CSS -->
-		<link href="{{ STATIC_URL }}assets/css/bootstrap.min.css" rel="stylesheet">
-		<link href="{{ STATIC_URL }}assets/css/font-awesome.min.css" rel="stylesheet">
-		<link href="{{ STATIC_URL }}assets/css/bjqs.css" rel="stylesheet">
-		<link href="{{ STATIC_URL }}assets/css/style.css" rel="stylesheet">
-		<link href="{{ STATIC_URL }}assets/css/rice.css" rel="stylesheet">
-		<!-- JavaScript -->
-		<script src="{{ STATIC_URL }}assets/js/jquery-2.0.0.js"></script>
-		<script src="{{ STATIC_URL }}assets/js/jquery.transit.min.js"></script>
-		<script src="{{ STATIC_URL }}assets/js/bootstrap.min.js"></script>
-		<script src="{{ STATIC_URL }}assets/js/holder.js"></script>
+		<title>RD007 - TCN Rice Database</title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<!-- Style -->
+		<link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
+		<link href="{{ STATIC_URL }}css/select2.css" rel="stylesheet">
+		<link href="{{ STATIC_URL }}css/style.css" rel="stylesheet">
+		<link href="{{ STATIC_URL }}font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<!-- JS -->
+		<script src="{{ STATIC_URL }}js/jquery-2.0.0.min.js"></script>
+		<script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+		<script src="{{ STATIC_URL }}js/select2.js"></script>
+		<script src="{{ STATIC_URL }}js/application.js"></script>
 	</head>
 	<body>
-		<!-- Na'Vi -->
-		<div class="navi">
+		<div id="logo"><i class="icon-arrow-up icon-4x"></i></div><!-- #logo -->
+		<div class="content" id="blur2">
+			<header class="wrap">
+				<nav>
+					<ul>
+						<li><a href="">TCN Rice Suggestion</a></li>
+					</ul>
+				</nav>
+			</header><!-- header -->
+			<div id="feature">
+			</div><!-- .feature -->
+		</div><!-- #blur2 -->
+		<div class="rice">
 			<div class="container">
-				<a class="brand" href="#">TCN Rice Expert</a>
-				<ul class="nav">
-					<li><a href="#step1">Step #1</a></li>
-					<li><a href="#step2">Step #2</a></li>
-					<li><a href="#step3">Step #3</a></li>
-					<li><a href="#step4">Step #4</a></li>
-					<li><a href="/rice/">TCN Rice Database</a></li>
-				</ul>
-			</div>
-		</div><!-- .navi -->
-		<div class="container">
-			<div id="content1" class="row-fluid">
-				<div class="span6">
-					<div class="text"><h2>Name: <strong>{{rice.name}}</strong></h2></div>
-					<div class="text"><h2>Kind: <small>{{rice.kind}}</small></h2></div>
-					<div class="text"><h2>No: <small>{{rice.number}}</small></h2></div>
-					<div class="text"><h2>Area: <small>{{rice.area}}</small></h2></div>
-					<div class="text"><h2>Terrain: <small>{{rice.terrain}}</small></h2></div>
+				<h1>{{rice.name}}</h1>
+				<div class="img-center">
+					<img src="http://kkn-rsc.ricethailand.go.th/rice/pedigree/01-pic/RD5.gif" class="img-polaroid" align="middle">
 				</div>
-				<div class="span6">
-					<img src="{{rice.pic}}">
+				<div id="des">
+					<div class="row-fluid">
+						<div class="span5" style="margin-left: 0">
+							<p><strong>Name:</strong>&nbsp;&nbsp;{{rice.name}}</p>
+							<p><strong>ID:</strong>&nbsp;&nbsp;{{rice.id}}</p>
+							<p><strong>Kind:</strong>&nbsp;&nbsp;{{rice.kind}}</p>
+							<p><strong>Area:</strong>&nbsp;&nbsp;{{rice.area}}</p>
+							<p><strong>Terrain:</strong>&nbsp;&nbsp;{{rice.terrain}}</p>
+						</div>
+						<div class="span7">
+							<p><strong>Characteristic:</strong>&nbsp;&nbsp;{{ rice.character }}</p>
+							<p><strong>Seed:</strong>&nbsp;&nbsp;{{ rice.seed }}</p>
+							<p><strong>Detail:</strong>&nbsp;&nbsp;{{ rice.detail }}</p>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div id="content2" class="row-fluid">
-				<div class="text"><h2>Characteristic: <small>{{ rice.character }}</small></h2></div><br>
-    		    <div class="text"><h2>Seed: <small>{{ rice.seed }}</small></h2></div><br>
-	        	<div class="text"><h2>Details: <small>{{ rice.detail }}</small></h2></div><br> 
 			</div>
 		</div>
+		<footer>
+			<div class="container">
+				<h5>TCN Rice Expert, Rice Variety Suggestion: Developed by TCN</h5>
+				<p><small>Kanokphol Techarattanaprasert 5410545915 | Pawis Chairoj 5410546237</small></p>
+				<p><small>Chanon Khamronyutha 5410546041 | Kunat Pipatanakul 541054xxxx</small></p>
+				<p><small>Tanachot 541054xxxx | and Suphanat 541054xxxx</small></p>
+			</div>
+		</footer>
 	</body>
 </html>

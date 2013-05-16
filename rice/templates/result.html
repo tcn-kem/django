@@ -1,91 +1,75 @@
+<!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>TCN Result</title>
-	<!-- Meta -->
-	<meta name="description" content="TCN Rice Database - Result">
-	<!-- CSS -->
-	<link href="{{ STATIC_URL }}assets/css/bootstrap.min.css" rel="stylesheet">
-	<link href="{{ STATIC_URL }}assets/css/font-awesome.min.css" rel="stylesheet">
-	<link href="{{ STATIC_URL }}assets/css/bjqs.css" rel="stylesheet">
-	<link href="{{ STATIC_URL }}assets/css/style.css" rel="stylesheet">
-	<!-- JavaScript -->
-	<script src="{{ STATIC_URL }}assets/js/jquery-2.0.0.js"></script>
-	<script src="{{ STATIC_URL }}assets/js/jquery.transit.min.js"></script>
-	<script src="{{ STATIC_URL }}assets/js/bootstrap.min.js"></script>
-	<script src="{{ STATIC_URL }}assets/js/holder.js"></script>
-</head>
-<body>
-	<!-- Na'Vi -->
-	<div class="navi">
-		<div class="container">
-			<a class="brand" href="#">TCN Rice Expert</a>
-			<ul class="nav pull-left">
-				<li><a href="#step1"><i class="icon-leaf"></i> Kind</a></li>
-				<li><a href="#step2"><i class="icon-map-marker"></i> Province</a></li>
-				<!-- <li><a href="#step3">SCVs</a></li> -->
-				<li><a href="#step4"><i class="icon-hand-up"></i> Submit</a></li>
-			</ul>
-			<ul class="nav pull-right">
-				<li><a href="/rice/"><i class="icon-reorder"></i> TCN Rice Database</a></li>
-			</ul>
-		</div>
-	</div><!-- .navi -->
-	<!-- TODO
-		user's submit
-		list of rices
-	-->
-	<!-- User -->
-	<!-- <div class="user">
-		<div class="container">
-			<h1>User</h1>
-		</div>
-	</div><!-- .user -->
-	<!-- Submit -->
-	<div class="submit">
-		<div class="container">
-			<h1>Submit</h1>
-			<div class="row-fluid">
-				<div class="span3">
-					<a href="#step1"><p><i class="icon-food icon-4x"></i></p></a>
-					<h3>Kind</h3>
-					<h4 id="selected-kind">Round Shaped Rice</h4>
-				</div>
-				<div class="span3">
-					<a href="#step2"><p><i class="icon-home icon-4x"></i></p></a>
-					<h3>Province</h3>
-					<h4 id="selected-province">North</h4>
-				</div>
-				<div class="span3">
-					<a href="#step3"><p><i class="icon-picture icon-4x"></i></p></a>
-					<h3>Terrain</h3>
-					<h4 id="selected-terrain">Highland</h4>
-				</div>
-				<div class="span3">
-					<a href="#"><p><i class="icon-hand-up icon-4x"></i></p></a>
-					<h3>Submit</h3>
-				</div>
+	<head>
+		<meta charset="utf-8">
+		<title>TCN Result</title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<!-- Style -->
+		<link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
+		<link href="{{ STATIC_URL }}css/select2.css" rel="stylesheet">
+		<link href="{{ STATIC_URL }}css/style.css" rel="stylesheet">
+		<link href="{{ STATIC_URL }}font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<!-- JS -->
+		<script src="{{ STATIC_URL }}js/jquery-2.0.0.min.js"></script>
+		<script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+		<script src="{{ STATIC_URL }}js/select2.js"></script>
+		<script src="{{ STATIC_URL }}js/application.js"></script>
+	</head>
+	<body>
+		<div id="logo"><i class="icon-arrow-up icon-4x"></i></div><!-- #logo -->
+		<div class="content" id="blur2">
+			<header class="wrap">
+				<nav>
+					<ul>
+						<li><a href="">TCN Rice Suggestion</a></li>
+					</ul>
+				</nav>
+			</header><!-- header -->
+			<div id="feature">
+			</div><!-- .feature -->
+		</div><!-- #blur -->
+		<div class="result">
+			<div class="container">
+				<h1>Your Information</h1>
+				<table class="table table-bordered table-hover">
+					<tr>
+						<th>Kind</th>
+						<th>Area</th>
+					</tr>
+					<tr>
+						<td>{{kind}}</td>
+						<td>{{area}}</td>
+					</tr>
+				</table>
+				<h1>Suggested List</h1>
+				{% if rices %}
+				<table class="table table-bordered table-hover">
+					<tr>
+						<th>ID</th>
+						<th>Name</th>
+						<th>No.</th>
+						<th>Summary</th>
+					</tr>
+					{%for rice in rices%}
+					<tr>
+						<td><a href=/rice/{{rice.id}}>{{rice.id}}</a></td>
+						<td>{{rice.name}}</td>
+						<td>{{rice.number}}</td>
+						<td>{{ rice.character }}</td>
+					</tr>
+					{%endfor%}
+				</table>
+				{%endif%}
 			</div>
 		</div>
-	</div><!-- .submit -->
-	<div class="list">
-		<div class="container">
-			{% if rices %}
-			<table class="table table-bordered table-striped">
-				
-				<tr>
-					<th>Name</th>
-					<th>No.</th>
-				</tr>
-				{%for rice in rices%}
-				<tr>
-					<td><a href=/rice/{{rice.id}}>{{rice.name}}</a></td>
-					<td>{{rice.number}}</td>
-				</tr>
-				{%endfor%}
-			</table>
-			{%endif%}
-		</div>
-	</div>
-</body>
+		<footer>
+			<div class="container">
+				<h5>TCN Rice Expert, Rice Variety Suggestion: Developed by TCN</h5>
+				<p><small>Kanokphol Techarattanaprasert 5410545915 | Pawis Chairoj 5410546237</small></p>
+				<p><small>Chanon Khamronyutha 5410546041 | Kunat Pipatanakul 541054xxxx</small></p>
+				<p><small>Tanachot 541054xxxx | and Suphanat 541054xxxx</small></p>
+			</div>
+		</footer>
+	</body>
 </html>
