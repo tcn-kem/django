@@ -49,14 +49,12 @@
 						<th>ID</th>
 						<th>Name</th>
 						<th>No.</th>
-						<th>Summary</th>
 					</tr>
 					{%for rice in rices%}
 					<tr>
 						<td><a href=/rice/{{rice.id}}>{{rice.id}}</a></td>
 						<td>{{rice.name}}</td>
 						<td>{{rice.number}}</td>
-						<td>{{ rice.character }}</td>
 					</tr>
 					{%endfor%}
 				</table>
