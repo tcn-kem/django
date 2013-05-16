@@ -49,7 +49,7 @@ h1 {
 }
 
 #logo {
-	color: red;
+	color: #665cbe;
 	padding: 30px;
 	position: fixed !important;
 	z-index: 1;
@@ -89,6 +89,12 @@ header nav ul li {
 
 header nav ul li a {
 	color: #6a6a6a;
+	font-family: "Gnuolane", sans-serif;
+	font-size: 20px;
+}
+
+header nav ul li a:hover {
+	text-decoration: none;
 }
 
 /* feature */
